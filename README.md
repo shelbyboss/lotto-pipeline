@@ -30,6 +30,7 @@ An end-to-end data project. It pulls Thai Government Lottery and Lao Development
 | Validate | Checks number format. When the source's 2-digit and 4-digit Lao numbers disagree (a known source typo), the 4-digit result wins. Unit tests run before every update. | `pipeline/sources.py`, `tests/` |
 | Load | Incremental: re-checks the last 3 days so late-published results are caught. Idempotent dedupe on `draw_date`. Writes go to a temp file and are swapped in atomically. | `pipeline/update.py` |
 | Analyze | Chi-square goodness-of-fit (2-digit, tens, units), walk-forward "hot-10" backtest with a binomial test, gap since last seen, and a monthly breakdown. | `pipeline/stats.py` |
+| Forecast | Four simple models (seasonal, hot, recency-weighted, overdue) each pick 10 numbers at the start of every month, using only earlier data. A monthly walk-forward scorecard compares each one against the 10% random baseline. | `pipeline/stats.py` |
 | Serve | A single static page reads `docs/data/*.json, *.csv`. It has light/dark mode and tooltips, and works on mobile. | `docs/index.html` |
 | Orchestrate | Daily cron, a manual backfill input, a concurrency guard, and a commit only when data changed. | `.github/workflows/update.yml` |
 
