@@ -1,0 +1,12 @@
+{
+ "last_run": "2026-10-26T10:00:00+07:00",
+ "runs": [
+  {
+   "at": "2026-10-26T10:00:00+07:00",
+   "note": "initial backfill",
+   "thai_added": 256,
+   "lao_added": 802,
+   "errors": 0
+  }
+ ]
+}
