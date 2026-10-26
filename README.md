@@ -2,6 +2,8 @@
 
 **Live dashboard:** https://shelbyboss.github.io/lotto-pipeline/
 
+[![Lottery Randomness Lab dashboard](screenshot.png)](https://shelbyboss.github.io/lotto-pipeline/)
+
 An end-to-end data project. It pulls Thai Government Lottery and Lao Development Lottery results **every day**, validates and stores them, runs statistical tests, and publishes an interactive dashboard. Everything runs on GitHub's free tier. No server, and no laptop left switched on.
 
 > The question: are "hot numbers" (เลขเด็ด / เลขออกบ่อย) real, or just randomness?
